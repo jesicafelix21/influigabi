@@ -136,8 +136,13 @@ button { font-family: inherit; cursor: pointer; }
 .footer-empty-link { transition: opacity 0.2s ease; }
 .footer-empty-link:hover { opacity: 0.8; text-decoration: underline; }
 
-.mini-cta-pill { transition: all 0.2s ease; cursor: pointer; }
+.mini-cta-pill { cursor: pointer; animation: mini-pulse 2.4s ease-in-out infinite; }
 .mini-cta-pill:hover { opacity: 0.9; transform: translateY(-1px); }
+
+@keyframes mini-pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(168, 85, 247, 0); }
+  50% { transform: scale(1.04); box-shadow: 0 0 18px 4px rgba(168, 85, 247, 0.35); }
+}
 
 .image-only-container { transition: all 0.2s ease; }
 .image-only-container:hover { transform: scale(1.01); }
